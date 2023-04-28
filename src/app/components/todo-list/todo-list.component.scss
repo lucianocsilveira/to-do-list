@@ -1,0 +1,21 @@
+li {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px lightgray solid ;
+  margin: 15px;
+
+  .delete-icon {
+    cursor: pointer;
+    mat-icon{
+      color: red;
+    }
+  }
+
+}
+.completed {
+  text-decoration: line-through;
+}
+

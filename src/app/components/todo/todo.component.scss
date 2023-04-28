@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  mat-card {
+    margin-bottom: 50px;
+    width: 50%;
+    min-width: 320px;
+
+  }
+
+}
+
+.add-task {
+  display: flex;
+  flex-direction: column;
+}
+

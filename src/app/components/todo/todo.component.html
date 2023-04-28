@@ -1,0 +1,34 @@
+<div class="container">
+  <mat-card class="all-center">
+    <mat-card-header>
+      <mat-card-title>To Do</mat-card-title>
+      <mat-card-subtitle></mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions class="add-task">
+      <mat-form-field class="example-full-width">
+        <mat-label>Descriçã da tarefa</mat-label>
+        <input matInput [(ngModel)]="task">
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="addTodo()">Adicionar tarefa</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Lista</mat-card-title>
+      <mat-card-subtitle>Minahs tarefas</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div style="margin: 15px 0;">
+        <ul *ngFor="let todo of todoList">
+          <app-todo-list
+            [todo]="todo"
+            (taskDeleted)="onDeleteTask($event)"
+            (taskCompleted)="onCompletTask($event)"
+            ></app-todo-list>
+        </ul>
+      </div>
+    </mat-card-content>
+
+  </mat-card>
+</div>
