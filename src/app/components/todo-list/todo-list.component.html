@@ -1,6 +1,6 @@
   <li class="todo-item"  [ngClass]="{'completed': todo.isCompleted }">
     <div>
-      <input type="checkbox" class="example-margin" (change)="onComplete()" >
+      <input type="checkbox" (change)="onComplete()" >
       {{todo.title}} - {{ todo.date | date: 'dd/MM/yyyy' }}
     </div>
     <div class="delete-icon" (click)="onDelete(todo)">
